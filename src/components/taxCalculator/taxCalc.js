@@ -1,5 +1,6 @@
 import { isNumber } from "./isNumber";
 
+//Calculates tax as per tax bracket
 export const taxCalc = (salary) => {
   if (!isNumber(salary)) return undefined;
 

@@ -10,6 +10,7 @@ export const Form = () => {
   const [superAmount, setSuperAmount] = useState(0);
   const [totalSalaryInclSuper, setTotalSalaryInclSuper] = useState(0);
 
+  //submits form
   const handleSubmit = (e) => {
     e.preventDefault();
     setTax(taxCalc(salary));
@@ -46,8 +47,44 @@ export const Form = () => {
             />
           </div>
         </div>
+
+        <label>Gender</label>
+        <div className="form-check">
+          <input
+            className="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="male"
+          />
+          <label className="form-check-label" htmlFor="male">
+            Male
+          </label>
+        </div>
+        <div className="form-check">
+          <input
+            className="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="female"
+          />
+          <label className="form-check-label" htmlFor="female">
+            Female
+          </label>
+        </div>
+        <div className="form-check mb-2">
+          <input
+            className="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="other"
+          />
+          <label className="form-check-label" htmlFor="other">
+            Other
+          </label>
+        </div>
+
         <div className="form-group">
-          <label htmlFor="dob">Date of birth</label>
+          <label htmlFor="dob">Date of birth (DD/MM/YYYY)</label>
           <input
             type="text"
             className="form-control mb-2"
@@ -91,8 +128,24 @@ export const Form = () => {
             <option value="it">IT</option>
             <option value="sales">Sales</option>
           </select>
+          <label htmlFor="position">Position</label>
+          <input
+            type="text"
+            className="form-control mb-2"
+            id="position"
+            aria-describedby="position"
+            placeholder="Enter your position"
+          />
+          <label htmlFor="position">Reporting manager</label>
+          <input
+            type="text"
+            className="form-control mb-2"
+            id="manager"
+            aria-describedby="manager"
+            placeholder="Enter your manager name"
+          />
         </div>
-        <div className="form-group">
+        <div className="form-group mb-4">
           <label htmlFor="salary">Salary excluding super</label>
           <input
             type="text"
@@ -107,7 +160,8 @@ export const Form = () => {
             <div className="text-danger mb-2">Please enter valid salary</div>
           ) : null}
         </div>
-        <div className="form-group">
+        <div className="form-group mb-4">
+          <h6>Salary and superannuation</h6>
           <label htmlFor="salary">
             Superannuation contribution rate (in %, rate between 10.5 and 25)
           </label>
@@ -124,6 +178,33 @@ export const Form = () => {
               Please enter valid superannuation
             </div>
           ) : null}
+        </div>
+        <div className="form-group">
+          <h6>Bank details</h6>
+          <label htmlFor="accountName">Account Name</label>
+          <input
+            type="text"
+            className="form-control mb-2"
+            id="accountName"
+            aria-describedby="accountName"
+            placeholder="Enter your account name"
+          />
+          <label htmlFor="bsb">BSB</label>
+          <input
+            type="text"
+            className="form-control mb-2"
+            id="bsb"
+            aria-describedby="bsb"
+            placeholder="Enter your BSB"
+          />
+          <label htmlFor="accountNumber">Account Number</label>
+          <input
+            type="text"
+            className="form-control mb-2"
+            id="accountNumber"
+            aria-describedby="accountNumber"
+            placeholder="Enter your account number"
+          />
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
