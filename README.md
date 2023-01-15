@@ -6,7 +6,6 @@
 - Capturing employee information helps create their company profile, generate company email and salary package.
 - Ability to customize superannuation rate.
 - We can auto generate employee contract using the form.
-- Offer exclusive company benefits
 - Ability to deposit salary to their nominated bank account.
 - Helps to know who the employee reports to.
 - Ability to know type of employmentment e.g. permanent, casual or contractor.
