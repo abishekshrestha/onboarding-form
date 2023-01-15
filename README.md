@@ -8,7 +8,7 @@
 - We can auto generate employee contract using the form.
 - Ability to deposit salary to their nominated bank account.
 - Helps to know who the employee reports to.
-- Ability to know type of employmentment e.g. permanent, casual or contractor.
+- Ability to know type of employment e.g. permanent, casual or contractor.
 
 # Getting Started with Create React App
 
