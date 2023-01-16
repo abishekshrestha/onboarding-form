@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { superCalc } from "../taxCalculator/superCalc";
 import { taxCalc } from "../taxCalculator/taxCalc";
 import { isNumber } from "../taxCalculator/isNumber";
@@ -13,13 +13,13 @@ export const Form = () => {
   //submits form
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTax(taxCalc(salary));
-    setSuperAmount(superCalc(salary, superRate));
+    const taxValue = taxCalc(salary);
+    const superValue = superCalc(salary, superRate);
+    const totalSalary = parseFloat(salary) + parseFloat(superAmount);
+    setTax(taxValue);
+    setSuperAmount(superValue);
+    setTotalSalaryInclSuper(totalSalary);
   };
-
-  useEffect(() => {
-    setTotalSalaryInclSuper(parseFloat(salary) + parseFloat(superAmount));
-  }, [tax, superAmount]);
 
   return (
     <>
