@@ -15,7 +15,7 @@ export const Form = () => {
     e.preventDefault();
     const taxValue = taxCalc(salary);
     const superValue = superCalc(salary, superRate);
-    const totalSalary = parseFloat(salary) + parseFloat(superAmount);
+    const totalSalary = parseFloat(salary) + parseFloat(superValue);
     setTax(taxValue);
     setSuperAmount(superValue);
     setTotalSalaryInclSuper(totalSalary);
